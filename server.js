@@ -12,11 +12,11 @@ app.engine('.hbs', exphbs({extname: '.hbs', defaultLayout: 'main'}));
 app.set('view engine', '.hbs');
 app.set('views',__dirname + '/views')
 
-app.get('/', (req, res) => {
+app.get('/smoke', (req, res) => {
   res.send('smoke test');
 });
 
-app.use('/home',home);
+app.use('/',home);
 app.use('/about',about);
 app.use('/contact',contact);
 
